@@ -2,6 +2,7 @@
 
 ## Stack
 - **Framework**: Next.js 16 (App Router)
+- **Linter/Formatter**: Biome
 - **Language**: TypeScript (strict mode)
 - **Styling**: Tailwind CSS v4
 - **Components**: shadcn/ui (style: default, base color: neutral)
@@ -19,9 +20,11 @@ public/       # Static assets
 
 ## Commands
 ```bash
-npm run dev    # Start development server
-npm run build  # Build for production
-npm run lint   # Run ESLint
+npm run dev        # Start development server
+npm run build      # Build for production
+npm run lint       # Run Biome (lint + format check)
+npm run lint:fix   # Auto-fix lint issues
+npm run format     # Auto-format files
 ```
 
 ## Path Aliases
