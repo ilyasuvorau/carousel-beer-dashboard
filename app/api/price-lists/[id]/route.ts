@@ -1,48 +1,52 @@
-import { type NextRequest, NextResponse } from "next/server";
-import { createClient } from "@/lib/supabase/server";
+import { type NextRequest, NextResponse } from 'next/server'
+import { requireAuth } from '@/lib/auth'
+import { createClient } from '@/lib/supabase/server'
 
-export async function GET(
-	_request: NextRequest,
-	{ params }: { params: Promise<{ id: string }> },
-) {
-	const { id } = await params;
-	const supabase = await createClient();
+export async function GET(_request: NextRequest, { params }: { params: Promise<{ id: string }> }) {
+  const authResult = await requireAuth()
+  if (authResult instanceof NextResponse) return authResult
 
-	const { data: priceList, error: listError } = await supabase
-		.from("price_lists")
-		.select("*")
-		.eq("id", id)
-		.single();
+  const { id } = await params
+  const supabase = await createClient()
 
-	if (listError) {
-		return NextResponse.json({ error: listError.message }, { status: 404 });
-	}
+  const { data: priceList, error: listError } = await supabase
+    .from('price_lists')
+    .select('*')
+    .eq('id', id)
+    .single()
 
-	const { data: items, error: itemsError } = await supabase
-		.from("price_items")
-		.select("*")
-		.eq("price_list_id", id)
-		.order("category", { ascending: true })
-		.order("product_name", { ascending: true });
+  if (listError) {
+    return NextResponse.json({ error: listError.message }, { status: 404 })
+  }
 
-	if (itemsError) {
-		return NextResponse.json({ error: itemsError.message }, { status: 500 });
-	}
+  const { data: items, error: itemsError } = await supabase
+    .from('price_items')
+    .select('*')
+    .eq('price_list_id', id)
+    .order('category', { ascending: true })
+    .order('product_name', { ascending: true })
 
-	return NextResponse.json({ ...priceList, items });
+  if (itemsError) {
+    return NextResponse.json({ error: itemsError.message }, { status: 500 })
+  }
+
+  return NextResponse.json({ ...priceList, items })
 }
 
 export async function DELETE(
-	_request: NextRequest,
-	{ params }: { params: Promise<{ id: string }> },
+  _request: NextRequest,
+  { params }: { params: Promise<{ id: string }> },
 ) {
-	const { id } = await params;
-	const supabase = await createClient();
+  const authResult = await requireAuth()
+  if (authResult instanceof NextResponse) return authResult
 
-	const { error } = await supabase.from("price_lists").delete().eq("id", id);
+  const { id } = await params
+  const supabase = await createClient()
 
-	if (error) {
-		return NextResponse.json({ error: error.message }, { status: 500 });
-	}
-	return new NextResponse(null, { status: 204 });
+  const { error } = await supabase.from('price_lists').delete().eq('id', id)
+
+  if (error) {
+    return NextResponse.json({ error: error.message }, { status: 500 })
+  }
+  return new NextResponse(null, { status: 204 })
 }

@@ -1,0 +1,84 @@
+{
+  "login": {
+    "title": "Сардэчна запрашаем",
+    "subtitle": "Увядзіце свае дадзеныя для ўваходу",
+    "email": "Email",
+    "emailPlaceholder": "name@example.com",
+    "password": "Пароль",
+    "signIn": "Увайсці",
+    "signingIn": "Уваходзім…"
+  },
+  "dashboard": {
+    "appName": "Beer Dashboard",
+    "priceLists": "Прайс-лісты",
+    "signOut": "Выйсці"
+  },
+  "priceLists": {
+    "title": "Прайс-лісты",
+    "subtitle": "Імпарт і кіраванне аптовымі прайс-лістамі піва.",
+    "importButton": "Імпартаваць",
+    "totalLists": "Усяго прайс-лістоў",
+    "priceListsImported": "прайс-лістоў імпартавана",
+    "completed": "Завершаныя",
+    "successRate": "{percent}% паспяховых",
+    "noListsYet": "яшчэ няма прайс-лістоў",
+    "itemsExtracted": "Здабытых пазіцый",
+    "acrossAllLists": "ва ўсіх прайс-лістах",
+    "noLists": "Прайс-лістоў няма. Імпартуйце адзін вышэй.",
+    "name": "Назва",
+    "type": "Тып",
+    "status": "Статус",
+    "extracted": "Здабыта"
+  },
+  "uploadForm": {
+    "dialogTitle": "Імпартаваць прайс-ліст",
+    "tabFile": "Загрузіць файл",
+    "tabGoogleDoc": "Google Дакумент",
+    "tabGoogleSheet": "Google Табліца",
+    "nameLabel": "Назва (неабавязкова)",
+    "namePlaceholderGeneral": "напрыклад, STAMM BREWING — Сакавік 2026",
+    "namePlaceholderBeer": "напрыклад, Black Cat Brewery — Сакавік 2026",
+    "fileLabel": "Файл (PDF, DOCX, XLSX)",
+    "googleDocUrlLabel": "URL Google Дакумента",
+    "googleDocUrlPlaceholder": "https://docs.google.com/document/d/...",
+    "googleSheetUrlLabel": "URL Google Табліцы",
+    "googleSheetUrlPlaceholder": "https://docs.google.com/spreadsheets/d/...",
+    "processing": "Апрацоўка...",
+    "uploadButton": "Загрузіць і здабыць",
+    "extractDocButton": "Здабыць з дакумента",
+    "extractSheetButton": "Здабыць з табліцы"
+  },
+  "extractionStatus": {
+    "pending": "Чакае",
+    "processing": "Апрацоўваецца...",
+    "done": "Гатова",
+    "error": "Памылка"
+  },
+  "priceTable": {
+    "noItems": "Пазіцый не знойдзена.",
+    "product": "Прадукт",
+    "style": "Стыль",
+    "abv": "ABV",
+    "ibu": "IBU",
+    "casePrice": "Цана за кейс",
+    "kegPrice": "Цана за кег",
+    "pack": "Упакоўка",
+    "availability": "Наяўнасць",
+    "inStock": "У наяўнасці",
+    "limited": "Абмежавана",
+    "outOfStock": "Няма ў наяўнасці",
+    "comingSoon": "Хутка"
+  },
+  "priceListDetail": {
+    "backLink": "Прайс-лісты",
+    "extracted": "Здабыта",
+    "source": "Крыніца"
+  },
+  "sourceTypes": {
+    "pdf": "PDF",
+    "docx": "Word",
+    "xlsx": "Excel",
+    "google_doc": "Google Дакумент",
+    "google_sheet": "Google Табліца"
+  }
+}

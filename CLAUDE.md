@@ -30,6 +30,12 @@ npm run format     # Auto-format files
 ## Path Aliases
 - `@/*` → root directory
 
+## Context7 Library IDs
+- **Next.js 16**: `/vercel/next.js/v16.1.6`
+- **next-intl**: `/amannn/next-intl`
+- **Supabase**: `/supabase/supabase`
+- **Supabase SSR**: `/supabase/ssr`
+
 ## Component Guidelines
 - Add shadcn/ui components with: `npx shadcn@latest add <component>`
 - Use `cn()` from `@/lib/utils` for conditional class merging
