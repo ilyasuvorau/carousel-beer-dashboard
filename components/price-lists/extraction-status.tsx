@@ -1,29 +1,25 @@
-"use client";
+'use client'
 
-import { Loader2 } from "lucide-react";
-import { Badge } from "@/components/ui/badge";
+import { Loader2 } from 'lucide-react'
+import { useTranslations } from 'next-intl'
+import { Badge } from '@/components/ui/badge'
 
-type Status = "pending" | "processing" | "done" | "error";
+type Status = 'pending' | 'processing' | 'done' | 'error'
 
-const statusConfig: Record<
-	Status,
-	{
-		label: string;
-		variant: "default" | "secondary" | "destructive" | "outline";
-	}
-> = {
-	pending: { label: "Pending", variant: "secondary" },
-	processing: { label: "Processing...", variant: "outline" },
-	done: { label: "Done", variant: "default" },
-	error: { label: "Error", variant: "destructive" },
-};
+const statusVariant: Record<Status, 'default' | 'secondary' | 'destructive' | 'outline'> = {
+  pending: 'secondary',
+  processing: 'outline',
+  done: 'default',
+  error: 'destructive',
+}
 
 export function ExtractionStatus({ status }: { status: Status }) {
-	const config = statusConfig[status] ?? statusConfig.pending;
-	return (
-		<Badge variant={config.variant} className="gap-1">
-			{status === "processing" && <Loader2 className="h-3 w-3 animate-spin" />}
-			{config.label}
-		</Badge>
-	);
+  const t = useTranslations('extractionStatus')
+  const variant = statusVariant[status] ?? statusVariant.pending
+  return (
+    <Badge variant={variant} className="gap-1">
+      {status === 'processing' && <Loader2 className="h-3 w-3 animate-spin" />}
+      {t(status)}
+    </Badge>
+  )
 }

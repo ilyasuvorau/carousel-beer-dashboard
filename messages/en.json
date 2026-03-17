@@ -1,0 +1,84 @@
+{
+  "login": {
+    "title": "Welcome back",
+    "subtitle": "Enter your credentials to sign in",
+    "email": "Email",
+    "emailPlaceholder": "name@example.com",
+    "password": "Password",
+    "signIn": "Sign in",
+    "signingIn": "Signing in…"
+  },
+  "dashboard": {
+    "appName": "Beer Dashboard",
+    "priceLists": "Price Lists",
+    "signOut": "Sign out"
+  },
+  "priceLists": {
+    "title": "Price Lists",
+    "subtitle": "Import and manage beer wholesale price lists.",
+    "importButton": "Import",
+    "totalLists": "Total Lists",
+    "priceListsImported": "price lists imported",
+    "completed": "Completed",
+    "successRate": "{percent}% success rate",
+    "noListsYet": "no lists yet",
+    "itemsExtracted": "Items Extracted",
+    "acrossAllLists": "across all lists",
+    "noLists": "No price lists yet. Import one above.",
+    "name": "Name",
+    "type": "Type",
+    "status": "Status",
+    "extracted": "Extracted"
+  },
+  "uploadForm": {
+    "dialogTitle": "Import Price List",
+    "tabFile": "Upload File",
+    "tabGoogleDoc": "Google Doc",
+    "tabGoogleSheet": "Google Sheet",
+    "nameLabel": "Name (optional)",
+    "namePlaceholderGeneral": "e.g. STAMM BREWING — March 2026",
+    "namePlaceholderBeer": "e.g. Black Cat Brewery — March 2026",
+    "fileLabel": "File (PDF, DOCX, XLSX)",
+    "googleDocUrlLabel": "Google Doc URL",
+    "googleDocUrlPlaceholder": "https://docs.google.com/document/d/...",
+    "googleSheetUrlLabel": "Google Sheets URL",
+    "googleSheetUrlPlaceholder": "https://docs.google.com/spreadsheets/d/...",
+    "processing": "Processing...",
+    "uploadButton": "Upload & Extract",
+    "extractDocButton": "Extract from Doc",
+    "extractSheetButton": "Extract from Sheet"
+  },
+  "extractionStatus": {
+    "pending": "Pending",
+    "processing": "Processing...",
+    "done": "Done",
+    "error": "Error"
+  },
+  "priceTable": {
+    "noItems": "No items found.",
+    "product": "Product",
+    "style": "Style",
+    "abv": "ABV",
+    "ibu": "IBU",
+    "casePrice": "Case Price",
+    "kegPrice": "Keg Price",
+    "pack": "Pack",
+    "availability": "Availability",
+    "inStock": "In Stock",
+    "limited": "Limited",
+    "outOfStock": "Out of Stock",
+    "comingSoon": "Coming Soon"
+  },
+  "priceListDetail": {
+    "backLink": "Price Lists",
+    "extracted": "Extracted",
+    "source": "Source"
+  },
+  "sourceTypes": {
+    "pdf": "PDF",
+    "docx": "Word",
+    "xlsx": "Excel",
+    "google_doc": "Google Doc",
+    "google_sheet": "Google Sheet"
+  }
+}

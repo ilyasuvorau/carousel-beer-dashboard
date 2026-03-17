@@ -1,18 +1,18 @@
-"use client";
+'use client'
 
-import { useRouter } from "next/navigation";
-import { useEffect } from "react";
+import { useRouter } from 'next/navigation'
+import { useEffect } from 'react'
 
 export function ProcessingPoller({ status }: { status: string }) {
-	const router = useRouter();
+  const router = useRouter()
 
-	useEffect(() => {
-		if (status !== "processing") return;
-		const interval = setInterval(() => {
-			router.refresh();
-		}, 3000);
-		return () => clearInterval(interval);
-	}, [status, router]);
+  useEffect(() => {
+    if (status !== 'processing') return
+    const interval = setInterval(() => {
+      router.refresh()
+    }, 3000)
+    return () => clearInterval(interval)
+  }, [status, router])
 
-	return null;
+  return null
 }

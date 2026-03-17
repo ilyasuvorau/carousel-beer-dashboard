@@ -1,0 +1,84 @@
+{
+  "login": {
+    "title": "Добро пожаловать",
+    "subtitle": "Введите данные для входа",
+    "email": "Email",
+    "emailPlaceholder": "name@example.com",
+    "password": "Пароль",
+    "signIn": "Войти",
+    "signingIn": "Входим…"
+  },
+  "dashboard": {
+    "appName": "Beer Dashboard",
+    "priceLists": "Прайс-листы",
+    "signOut": "Выйти"
+  },
+  "priceLists": {
+    "title": "Прайс-листы",
+    "subtitle": "Импорт и управление оптовыми прайс-листами пива.",
+    "importButton": "Импортировать",
+    "totalLists": "Всего прайс-листов",
+    "priceListsImported": "прайс-листов импортировано",
+    "completed": "Завершённые",
+    "successRate": "{percent}% успешных",
+    "noListsYet": "ещё нет прайс-листов",
+    "itemsExtracted": "Извлечённых позиций",
+    "acrossAllLists": "во всех прайс-листах",
+    "noLists": "Прайс-листов нет. Импортируйте один выше.",
+    "name": "Название",
+    "type": "Тип",
+    "status": "Статус",
+    "extracted": "Извлечено"
+  },
+  "uploadForm": {
+    "dialogTitle": "Импортировать прайс-лист",
+    "tabFile": "Загрузить файл",
+    "tabGoogleDoc": "Google Документ",
+    "tabGoogleSheet": "Google Таблица",
+    "nameLabel": "Название (необязательно)",
+    "namePlaceholderGeneral": "например, STAMM BREWING — Март 2026",
+    "namePlaceholderBeer": "например, Black Cat Brewery — Март 2026",
+    "fileLabel": "Файл (PDF, DOCX, XLSX)",
+    "googleDocUrlLabel": "URL Google Документа",
+    "googleDocUrlPlaceholder": "https://docs.google.com/document/d/...",
+    "googleSheetUrlLabel": "URL Google Таблицы",
+    "googleSheetUrlPlaceholder": "https://docs.google.com/spreadsheets/d/...",
+    "processing": "Обработка...",
+    "uploadButton": "Загрузить и извлечь",
+    "extractDocButton": "Извлечь из документа",
+    "extractSheetButton": "Извлечь из таблицы"
+  },
+  "extractionStatus": {
+    "pending": "В ожидании",
+    "processing": "Обрабатывается...",
+    "done": "Готово",
+    "error": "Ошибка"
+  },
+  "priceTable": {
+    "noItems": "Позиций не найдено.",
+    "product": "Продукт",
+    "style": "Стиль",
+    "abv": "ABV",
+    "ibu": "IBU",
+    "casePrice": "Цена за кейс",
+    "kegPrice": "Цена за кег",
+    "pack": "Упаковка",
+    "availability": "Наличие",
+    "inStock": "В наличии",
+    "limited": "Ограничено",
+    "outOfStock": "Нет в наличии",
+    "comingSoon": "Скоро"
+  },
+  "priceListDetail": {
+    "backLink": "Прайс-листы",
+    "extracted": "Извлечено",
+    "source": "Источник"
+  },
+  "sourceTypes": {
+    "pdf": "PDF",
+    "docx": "Word",
+    "xlsx": "Excel",
+    "google_doc": "Google Документ",
+    "google_sheet": "Google Таблица"
+  }
+}
