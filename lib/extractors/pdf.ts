@@ -1,5 +1,4 @@
 // lib/extractors/pdf.ts
-
 export type PdfResult = { type: 'text'; content: string } | { type: 'pdf_base64'; data: string }
 
 export async function parsePdf(buffer: Buffer): Promise<PdfResult> {
