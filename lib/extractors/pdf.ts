@@ -1,5 +1,5 @@
 // lib/extractors/pdf.ts
-import pdfParse from 'pdf-parse'
+import { PDFParse } from 'pdf-parse'
 
 export type PdfResult =
   | { type: 'text'; content: string }
@@ -9,6 +9,7 @@ export async function parsePdf(buffer: Buffer): Promise<PdfResult> {
   if (process.env.LLM_PROVIDER === 'anthropic') {
     return { type: 'pdf_base64', data: buffer.toString('base64') }
   }
-  const result = await pdfParse(buffer)
+  const parser = new PDFParse({ data: buffer })
+  const result = await parser.getText()
   return { type: 'text', content: result.text }
 }
