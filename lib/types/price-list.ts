@@ -36,24 +36,24 @@ export const PriceItemSchema = z.object({
   created_at: z.string(),
 })
 
-/** Schema for validating LLM-extracted items (id/price_list_id/created_at omitted, all optional except product_name). */
+/** Schema for validating LLM-extracted items (id/price_list_id/created_at omitted, all nullish except product_name). */
 export const ExtractedItemSchema = z.object({
   product_name: z.string(),
-  style: z.string().optional(),
-  description: z.string().optional(),
-  abv: z.number().optional(),
-  ibu: z.number().optional(),
-  category: z.string().optional(),
-  price_case: z.number().optional(),
-  price_keg: z.number().optional(),
-  pack_size: z.string().optional(),
-  currency: z.string().optional(),
+  style: z.string().nullish(),
+  description: z.string().nullish(),
+  abv: z.number().nullish(),
+  ibu: z.number().nullish(),
+  category: z.string().nullish(),
+  price_case: z.number().nullish(),
+  price_keg: z.number().nullish(),
+  pack_size: z.string().nullish(),
+  currency: z.string().nullish(),
   availability: z
     .enum(['in_stock', 'limited', 'out_of_stock', 'coming_soon'])
-    .optional(),
-  image_url: z.string().optional(),
-  bottling_date: z.string().optional(),
-  notes: z.string().optional(),
+    .nullish(),
+  image_url: z.string().nullish(),
+  bottling_date: z.string().nullish(),
+  notes: z.string().nullish(),
 })
 
 // ─── TypeScript types ─────────────────────────────────────────────────────────
