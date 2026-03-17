@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import { ExtractionStatus } from "@/components/price-lists/extraction-status";
 import { PriceTable } from "@/components/price-lists/price-table";
+import { ProcessingPoller } from "@/components/price-lists/processing-poller";
 import { createClient } from "@/lib/supabase/server";
 import type { PriceItem, PriceList } from "@/lib/types/price-list";
 
@@ -30,6 +31,7 @@ export default async function PriceListDetailPage({
 
 	return (
 		<div className="space-y-4">
+			<ProcessingPoller status={(priceList as PriceList).status} />
 			<div className="flex items-center gap-3">
 				<h1 className="text-2xl font-semibold">{priceList.name}</h1>
 				<ExtractionStatus status={(priceList as PriceList).status} />
